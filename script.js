@@ -61,6 +61,9 @@ calButtons.addEventListener("click", (e) => {
             operand1 = parseFloat(result);
             operator = '';
             operand2 = '';
+            if (operators.includes(curr_char)){
+                operator = curr_char;
+            }
         }
         console.log(curr_char);
     }
@@ -73,7 +76,7 @@ function operate(opd1,opd2,op){
         case '+':
             return add(opd1, opd2);
         case '-':
-            return sub(opd1. opd2);
+            return sub(opd1, opd2);
         case '*':
             return mul(opd1, opd2);
         case '/':
